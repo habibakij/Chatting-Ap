@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10sp"
+    android:layout_margin="10sp"
+    app:cardCornerRadius="10sp">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chatlist_profile_image"
+            android:layout_width="64sp"
+            android:layout_height="64sp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/chatlist_display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:gravity="bottom"
+            android:layout_marginStart="20sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/chatlist_profile_image"
+            android:text="@string/d_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/chatlist_display_name"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/chatlist_online_icon"
+                android:layout_width="15sp"
+                android:layout_height="30sp"
+                android:gravity="center"
+                android:src="@drawable/onlineicon"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chatlist_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="@string/d_status"
+            android:textSize="12sp"
+            android:layout_below="@id/chatlist_display_name"
+            android:layout_toEndOf="@id/chatlist_profile_image"/>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

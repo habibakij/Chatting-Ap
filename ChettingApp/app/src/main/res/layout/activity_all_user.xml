@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllUser.FindUser"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_app_ber"
+        android:id="@+id/toolbar_allfinder"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="5sp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/enter_search_text"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="8.5"
+            android:paddingStart="10sp"
+            android:paddingEnd="0sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:textSize="18sp"
+            android:hint="@string/search_text"
+            android:background="@drawable/round3" />
+
+        <View
+            android:layout_width="0sp"
+            android:layout_weight=".1"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="0sp"
+            android:layout_weight="1.4"
+            android:elevation="5sp"
+            android:background="@drawable/round3"
+            android:layout_height="match_parent"
+            android:src="@drawable/searchicon"/>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/finder_recylarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16sp">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
